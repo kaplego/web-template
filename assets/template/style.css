@@ -52,6 +52,18 @@ h3 {
     color: var(--bs-gray) !important;
 }
 
+.text-shadow {
+    text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.text-shadow-sm {
+    text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
+}
+
+.text-shadow-lg {
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+}
+
 @keyframes show-up {
     from {
         visibility: visible;
@@ -64,7 +76,7 @@ h3 {
     }
 }
 
-@keyframes show-up-small {
+@keyframes show-up-sm {
     from {
         visibility: visible;
         opacity: 0;
@@ -95,9 +107,9 @@ h3 {
     animation-delay: var(--show-delay);
 }
 
-.show-up-small {
+.show-up-sm {
     visibility: hidden;
-    animation-name: show-up-small;
+    animation-name: show-up-sm;
     animation-duration: calc(1s);
     animation-delay: var(--show-delay);
 }
@@ -183,10 +195,14 @@ h3 {
     z-index: 1000 !important;
 }
 
+#header.bg-header-top {
+    background-color: rgba(0, 0, 0, .1);
+}
+
 .shadow-bottom {
     -webkit-box-shadow: 0 4px 6px 0px rgba(var(--bs-dark-rgb), .25);
     -moz-box-shadow: 0 4px 6px 0px rgba(var(--bs-dark-rgb), .25);
-    box-shadow: 0 4px 6px 0px rgba(var(--bs-dark-rgb), .25);
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.15);
 }
 
 #headLogin button {
@@ -285,7 +301,7 @@ section h2.section-title.notupper {
 
 .subtitle {
     font-size: 1.5rem;
-    color: var(--bs-light);
+    color: white !important;
 }
 
 .feature-container {
@@ -303,7 +319,7 @@ section h2.section-title.notupper {
 
 .feature-card {
     flex: 1 0 calc((100%/4) - 2rem) !important;
-    background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), .4) 0%, rgba(23, 155, 238, .4) 100%);
+    background: rgba(255, 255, 255, 0.1) !important;
     border-radius: 1rem;
     padding: 1.5rem;
     box-sizing: border-box;
@@ -311,13 +327,13 @@ section h2.section-title.notupper {
     flex-direction: column;
     justify-content: center;
     margin: 1rem;
-    color: var(--bs-dark);
-    box-shadow: rgba(0, 0, 0, 0.15) 0 0 10px 0;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 7px 0;
     transition: box-shadow 200ms, transform 200ms;
 }
 
 .feature-card:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 10px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 3px 7px 0;
     transform: translateY(-3px);
 }
 
@@ -335,6 +351,14 @@ section h2.section-title.notupper {
 
 .feature-body {
     margin-bottom: 0 !important;
+}
+
+.btn-transparent {
+    background-color: transparent !important;
+}
+
+.btn-transparent:hover {
+    background-color: rgba(0, 0, 0, .075) !important;
 }
 
 input.contact-input,

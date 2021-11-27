@@ -1,8 +1,8 @@
 $('.show-up').animateVisible({ up: true });
-$('.show-up-small').animateVisible({ up: true });
+$('.show-up-sm').animateVisible({ up: true });
 $('.show-down').animateVisible({ up: true });
 
-[...$('.show-up, .show-up-small, .show-down')].forEach(element => {
+[...$('.show-up, .show-up-sm, .show-down')].forEach(element => {
     element.classList.remove('show-end');
     element.addEventListener('animationend', () => {
         element.classList.add('show-end');
@@ -13,12 +13,12 @@ window.onscroll = headerScroll;
 
 function headerScroll() {
     if (window.scrollY > 0) {
-        $('#header')[0].classList.remove("bg-transparent", "navbar-dark");
+        $('#header')[0].classList.remove("bg-header-top", "navbar-dark");
         $('#header')[0].classList.add("bg-light", "navbar-light", "shadow-bottom");
         $('#header .navbar-brand img')[0].src = "assets/images/bootstrap-logo.svg";
         $('#nav-separator')[0].classList.remove("top");
     } else {
-        $('#header')[0].classList.add("bg-transparent", "navbar-dark");
+        $('#header')[0].classList.add("bg-header-top", "navbar-dark");
         $('#header')[0].classList.remove("bg-light", "navbar-light", "shadow-bottom");
         $('#header .navbar-brand img')[0].src = "assets/images/bootstrap-logo-white.svg";
         $('#nav-separator')[0].classList.add("top");
