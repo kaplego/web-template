@@ -15,12 +15,12 @@ function headerScroll() {
     if (window.scrollY > 0) {
         $('#header')[0].classList.remove("bg-transparent", "navbar-dark");
         $('#header')[0].classList.add("bg-light", "navbar-light", "shadow-bottom");
-        $('#header .navbar-brand img')[0].src = "/assets/images/bootstrap-logo.svg";
+        $('#header .navbar-brand img')[0].src = "assets/images/bootstrap-logo.svg";
         $('#nav-separator')[0].classList.remove("top");
     } else {
         $('#header')[0].classList.add("bg-transparent", "navbar-dark");
         $('#header')[0].classList.remove("bg-light", "navbar-light", "shadow-bottom");
-        $('#header .navbar-brand img')[0].src = "/assets/images/bootstrap-logo-white.svg";
+        $('#header .navbar-brand img')[0].src = "assets/images/bootstrap-logo-white.svg";
         $('#nav-separator')[0].classList.add("top");
     }
 }
